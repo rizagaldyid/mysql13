@@ -11,7 +11,7 @@
         echo $_GET['pesan'];
         ?>
         <h1 >Form Tambah Data</h1>
-        <form action="proses-tambah.php" method="post">
+        <form action="proses-tambah.php" method="post" enctype="multipart/form-data">
         <table>
             <tr>
                 <td>Kode Barang</td>
@@ -33,8 +33,14 @@
                 <td>:</td>
                 <td><input type="text" name="stok" id=""></td>
             </tr>
+            <tr>
+                <td>Gambar</td>
+                <td>:</td>
+                <td><input type="file" name="gambar" id=""></td>
+            </tr>
         </table>
         <input type= "submit" id= "Simpan">
+
 
         </form>
 </body>
