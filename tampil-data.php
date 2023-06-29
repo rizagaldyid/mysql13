@@ -58,11 +58,12 @@ th, td {
         <button type="submit" name="cari">cari</button>
     </form>
 
-    <a href="tambah-data.php">::Tambah Data::</a>
+    <a href="tambah-data.php">::Tambah Data::</a> | <a href="penjualan.php">::Penjualan::</a>
     <table>
         <tr>
             <td>Kode barang</td>
             <td>Nama Barang</td>
+            <td>Gambar</td>
             <td>Harga</td>
             <td>Jumlah</td>
             <td>Aksi</td>
@@ -72,11 +73,13 @@ th, td {
         <tr>
             <td><?=$baris['kode_barang'] ?> </td>
             <td><?=$baris['nama_barang'] ?> </td>
+            <td><img src="<?= 'img/'. $baris['image']?>" width="500"></td>
             <td><?=$baris['harga'] ?> </td>
             <td><?=$baris['stok'] ?> </td>
             <td>
                 <a href="edit.php?kode=<?= $baris['kode_barang'] ?>">Edit</a>
                 <a href="delete.php?kode=<?=$baris['kode_barang']?>" onclick="return confirm('Yakin ingin di hapus')">Delete</a>
+                <a href="penjualan.php?kode<?=$baris['kode_barang'] ?>">Beli</a>
             </td>
         </tr>
 
